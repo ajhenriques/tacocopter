@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+
+production:
+  <<: *default
+  database: tacocopter_production
+  username: tacocopter
+  password: <%= ENV['HPWA_DATABASE_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: tacocopter_development
+
+test:
+  <<: *default
+  database: tacocopter_test

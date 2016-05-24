@@ -15,6 +15,7 @@ gem 'text-table'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
+  gem 'annotate'
   gem 'pry-rails'
   gem 'railroady'
   gem 'spring'
